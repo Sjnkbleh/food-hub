@@ -26,5 +26,5 @@ npm run dev
 
 # Acknowledgements
 
-API: [TheMealDB](https://themealdb.com/)
-Database: [MongoDB](https://www.mongodb.com)
+- API: [TheMealDB](https://themealdb.com/)
+- Database: [MongoDB](https://www.mongodb.com)
