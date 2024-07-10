@@ -61,10 +61,6 @@
         :class="{ 'bg-green-500 text-white': activeMenuItem === 'favorite' }" @click="toggleMobileMenu('favorite')">
         Favorite
       </router-link>
-      <router-link :to="{ name: 'profile' }" class="block px-4 py-2 text-gray-800"
-        :class="{ 'bg-green-500 text-white': activeMenuItem === 'profile' }" @click="toggleMobileMenu('profile')">
-        Profile
-      </router-link>
       <button @click="logout" class="block w-full text-left px-4 py-2 text-gray-800">
         Logout
       </button>
