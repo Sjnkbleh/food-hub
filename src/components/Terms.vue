@@ -32,8 +32,3 @@ const closePopup = () => {
 };
 </script>
 
-<style scoped>
-.fixed {
-    position: fixed;
-}
-</style>

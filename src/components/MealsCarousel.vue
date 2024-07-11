@@ -5,7 +5,7 @@
         class="relative w-full flex-nowrap flex overflow-hidden rounded-lg">
         <router-link :key="currentMeal.strMeal" :to="{ name: 'mealDetails', params: { id: currentMeal.idMeal } }"
           class="flex-shrink-0 w-full transition-transform duration-1000">
-          <img :src="currentMeal.strMealThumb" :alt="currentMeal.strMeal" class="w-full max-h-96 object-cover" />
+          <img :src="currentMeal.strMealThumb" :alt="currentMeal.strMeal" class="w-full h-[400px] object-cover" />
         </router-link>
       </transition-group>
       <!-- Carousel indicators -->

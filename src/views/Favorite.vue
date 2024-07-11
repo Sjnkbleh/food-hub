@@ -8,7 +8,7 @@
           You have no favorite meals.
         </div>
         <div v-else>
-          <div class="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 flex-grow">
+          <div class="p-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
             <MealItem v-for="meal in paginatedMeals" :key="meal.idMeal" :meal="meal" @toggleFavorite="toggleFavorite" />
           </div>
           <Pagination class="pb-4"
