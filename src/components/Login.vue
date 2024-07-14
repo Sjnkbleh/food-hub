@@ -7,27 +7,19 @@
       <form @submit.prevent="onSubmit" class="space-y-4">
         <div>
           <label for="email" class="block text-gray-700">Email</label>
-          <input v-model="form.email" type="email" name="email"
+          <input v-model="form.email" type="email" id="email"
             class="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" />
           <p v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</p>
         </div>
         <div>
           <label for="password" class="block text-gray-700">Password</label>
           <div class="relative mt-1">
-            <input v-model="form.password" :type="showPassword ? 'text' : 'password'" name="password"
+            <input v-model="form.password" :type="showPassword ? 'text' : 'password'" id="password"
               class="block w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-green-500" />
             <font-awesome-icon :icon="showPassword ? 'eye-slash' : 'eye'"
               class="absolute right-3 top-3 cursor-pointer text-gray-500" @click="togglePasswordVisibility" />
           </div>
           <p v-if="errors.password" class="text-red-500 text-sm">{{ errors.password }}</p>
-        </div>
-        <div class="flex items-center">
-          <input v-model="form.rememberMe" type="checkbox" name="rememberMe"
-            class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
-          <label for="rememberMe" class="ml-2 mr-1 block text-gray-900">Remember Me</label>
-          <a href="" class="text-sm text-green-500 hover:underline">
-            Forgot password?
-          </a>
         </div>
         <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">
           Login
@@ -49,29 +41,19 @@
         <form @submit.prevent="onSubmit" class="space-y-4">
           <div>
             <label for="email" class="block text-gray-700">Email</label>
-            <input v-model="form.email" type="email" name="email"
+            <input v-model="form.email" type="email" id="email"
               class="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" />
             <p v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</p>
           </div>
           <div>
             <label for="password" class="block text-gray-700">Password</label>
             <div class="relative mt-1">
-              <input v-model="form.password" :type="showPassword ? 'text' : 'password'" name="password"
+              <input v-model="form.password" :type="showPassword ? 'text' : 'password'" id="password"
                 class="block w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-green-500" />
               <font-awesome-icon :icon="showPassword ? 'eye-slash' : 'eye'"
                 class="absolute right-3 top-3 cursor-pointer text-gray-500" @click="togglePasswordVisibility" />
             </div>
             <p v-if="errors.password" class="text-red-500 text-sm">{{ errors.password }}</p>
-          </div>
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <input v-model="form.rememberMe" type="checkbox" name="rememberMe"
-                class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
-              <label for="rememberMe" class="ml-2 block text-gray-900">Remember Me</label>
-            </div>
-            <a href="" class="text-sm text-green-500 hover:underline">
-              Forgot password?
-            </a>
           </div>
           <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">
             Log In
@@ -107,7 +89,6 @@ import Popup from '../components/Popup.vue';
 const form = ref({
   email: '',
   password: '',
-  rememberMe: false
 });
 
 const errors = ref({});

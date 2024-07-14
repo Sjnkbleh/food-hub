@@ -11,7 +11,7 @@
       <button @click="searchMeals" class="absolute inset-y-0 right-0 flex items-center pr-3 z-10">
         <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="text-xl cursor-pointer"></font-awesome-icon>
       </button>
-      <div v-if="showDropdown" class="absolute w-full bg-white mt-1 border rounded overflow-y-auto" style="max-height: 200px;">
+      <div v-if="showDropdown" class="absolute w-full bg-white mt-1 border rounded overflow-y-auto max-h-[200px]">
         <ul>
           <li v-for="meal in searchResults" :key="meal.idMeal" @click="selectMeal(meal.idMeal)"
             class="p-2 hover:bg-gray-100 cursor-pointer flex items-center">
